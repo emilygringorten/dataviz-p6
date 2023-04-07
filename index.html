@@ -64,10 +64,10 @@
 <!-- Section 1: Project title, group ID, group members names, and an optional project image goes here -->    
     <section class="container-fluid px-0 py-0" style="margin-top:150px">
         <div>
-                  <h1 style="text-align:center; font-weight: bold;"> This is where the Group ID: Title of your project should go </h1> 
-                  <h3 style="text-align:center;"> This is where the names of all the group members will go</h2>   
-                  <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="sample.jpg" alt="Optional project image"> 
-                  <p style="text-align: center;">Image Name: Optional Image for your Project</p>  
+                  <h1 style="text-align:center; font-weight: bold;"> Group 7: Women Writers Project </h1>
+                  <h2 style="text-align:center;"> Emily Gringorten, Sofie Cook, Grace Brown </h2>
+<!--                  <img style="display:block; margin-left:auto; margin-right:auto; width:50%" src="sample.jpg" alt="Optional project image"> -->
+<!--                  <p style="text-align: center;">Image Name: Optional Image for your Project</p>  -->
             </div>    
     </section>
     
@@ -77,7 +77,15 @@
         <section id="motivation" class="container-fluid px-0" style="margin-top:50px"></section>
         <div>
             <h2  style="text-align:center; font-weight: bold;"> Motivation </h2> 
-            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>      
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">The goal of this project is to uncover new insights in the data and present our findings in
+                an exciting and accessible way; WWP’s hope is to get young people interested in learning more about the
+                texts in the collection. We will be visually displaying our findings in the form of several interactive
+                and static charts that will showcase the ways in which the texts are connected to each other, along with
+                any other trends we can extrapolate from the data. We will be placing an emphasis on texts written by
+                women. We want to demonstrate how many of these texts are out there, along with allowing the viewer to
+                learn more about specific texts in the collection. We hope to find correlations between works in the
+                collection that allow people to understand them in a new way.
+            </p>
         </div>    
     </section>
 
@@ -85,16 +93,49 @@
     <!-- Section 3: Data -->  
     <section id="data" class="container-fluid px-0" style="margin-top:50px"></section>
         <div>
-            <h2  style="text-align:center; font-weight: bold;"> Data </h2> 
-            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>      
+            <h2  style="text-align:center; font-weight: bold;"> Data </h2>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">We are primarily working with chronological data from the WWP. The data tracks writers, texts,
+                and intertextual gestures within those texts. The data is split up into multiple different json files
+                for the following categories: Barbauld, classical, drama, Dryden, female writers, Horace, novels,
+                poetry, Pope, sacred texts, and Shakespeare. Barbauld, Dryden, Horace, Pope, and Shakespeare all contain
+                data on works that reference those authors. Classical, drama, female writers, and sacred texts contain
+                data on works that reference texts of those categories.  For our project, we plan to focus on the reference
+                data included in each file to investigate trends of how the texts interact with each other. Specifically,
+                we plan to look at how references to female authors have changed over time and look for other trends
+                present in how authors reference each other. To make the data more manageable to work with, we converted
+                the json files to csv files, detailed more below when discussing our data cleaning. </p>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">
+                Each dataset has columns wwoDocId, wwoDocDesc, referencedWorks, totalGestures, gestureTypes, and
+                publicationDate.  WwwoDocID (ordinal) is the unique ID of each row. WwoDocDesc contains information on
+                author (categorical), title (categorical), and publication date (quantitative) of the text. The column
+                referencedWorks contains a list of references, each containing the id (ordinal), title (categorical),
+                year (quantitative), and author (categorical) of the referenced work plus the amount of times it was
+                referenced (quantitative). The way it was referenced is noted in the guestureTypes column. This column
+                contains a list of gesture types (categorical) and the count for that type of gesture (quantitative).
+                TotalGestures (quantitative) is the number of gestures present in the text. Finally, publicationDate
+                (quantitative) is the publication date of the text.
+            </p>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">
+                To clean the data, we first converted the json files to csv files to allow us to work with the data
+                better in python. After that, we were having trouble with the referencedWorks and gestureTypes columns,
+                as both had a variable length list of information within them, making it hard to work with those columns.
+                To fix this, we created new rows for each referenced work, keeping all of the other columns the same, so
+                that the referencedWorks column only had one item per row in it. We left the gestureTypes as is for now,
+                as the gestureTypes column does not specify which reference each gesture matches up with, so may not
+                prove useful in our analysis of referencing.
+            </p>
         </div>
     </section>
 
     <!-- Section 4: Task Analysis -->  
     <section id="task" class="container-fluid px-0" style="margin-top:50px"></section>
         <div>
-            <h2  style="text-align:center; font-weight: bold;"> Task Analysis </h2> 
-            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>      
+            <h2 style="text-align:center; font-weight: bold;"> Task Analysis </h2>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">Our visualizations will be primarily to bring new life to the texts through interesting insights and
+                uncovering hidden trends in the data (exploratory visualizations). Our primary stakeholder will be the
+                members of WWP, along with their blog readers and community members. Their goal is to get more “modern”
+                readers interested in the older texts in a new way. Here are a few tasks we identified and hope to
+                answer with our visualizations.</p>
         </div>
     </section>
 
@@ -102,8 +143,29 @@
     <!-- Section 5: Data Analysis -->  
     <section id="analysis" class="container-fluid px-0" style="margin-top:50px"></section>
         <div>
-            <h2  style="text-align:center; font-weight: bold;"> Data Analysis </h2> 
-            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>      
+            <h2  style="text-align:center; font-weight: bold;"> Data Analysis </h2>
+            <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">
+                Here are a few findings from our initial static charts:
+            </p>
+            <ul>
+                <li style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">
+                    <p>
+                        Some female authors reference themselves more than they reference others. Ex: Barbauld
+                    </p>
+                </li>
+                <li style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">
+                    Some of the most popular referenced works were Hamlet, the Tragedy of Macbeth, and the Tragedy of Othello
+                </li>
+                <li style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">
+                    John Dryden was referenced a large amount in the mid 1700s. Starting in the 1840s, Elizabeth Margaret Chandler was the most popular author to be referenced. Shakespeare is referenced less than expected.
+                </li>
+                <li style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">
+                    Title, quote, and citation are the three most popular gesture types by a large amount
+                </li>
+                <li style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">
+                    The ratio of references to female authors vs texts written by female authors overtime does not increase very steadily as hypothesized but rather is extremely volatile.
+                </li>
+            </ul>
         </div>
     </section>
 
@@ -111,7 +173,7 @@
     <!-- Section 6: Design Process -->  
     <section id="design" class="container-fluid px-0" style="margin-top:50px"></section>
         <div>
-            <h2  style="text-align:center; font-weight: bold;"> Design Process </h2> 
+            <h2  style="text-align:center; font-weight: bold;"> Design Process </h2>
             <p style="text-align: center; font-size:; margin-left:auto; margin-right:auto; width:50%; text-align: justify;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker.</p>      
         </div>
     </section>
@@ -128,14 +190,14 @@
     <p style="font-size:20px; font-weight:; text-align: center;">Description of the visualization goes here.</p>
      
     <!-- Div for first visualization with an ID vis1-->  
-        <div id="vis1" class="center"></div>
+<!--        <div id="vis1" class="center"></div>-->
     
      <!-- Add a header for the second vis--> 
         <p style="font-size:20px; font-weight: bold;text-align: center;">Second Visualization</p>
         <p style="font-size:20px; font-weight:; text-align: center;">Description of the visualization goes here.</p>
         
     <!-- Div for second visualization with an ID vis2-->
-        <div id="vis2" class="center"></div>
+<!--        <div id="vis2" class="center"></div>-->
 
 
     <!--VegaEmbed function for chart 1/vis1 -->   
