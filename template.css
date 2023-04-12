@@ -5,6 +5,12 @@ body {
     
 }
 
+.center {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
 /* Styling the Navbar*/
 #mainNavbar {
     font-size: 1.5rem;
@@ -24,7 +30,6 @@ body {
 }
 
 #mainNavbar .nav-link:hover {
-    color: ;
     font-size:22px;
     font-weight:bold;
 
@@ -41,6 +46,15 @@ body {
 
 }
 
+.chart-description {
+    text-align: center;
+    width:50%;
+    font-size: 18px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+
 /* Adjusting the anchors to each sections so that the header is not hidden by the navbar. Try commenting the code below this specific comment to see how the section
 header gets hidden by the navbar*/
 
@@ -51,7 +65,7 @@ header gets hidden by the navbar*/
 
 
 /*Copied from test.css example*/
-  #vis1 {
+  #steam {
     margin: auto;
     width: 50%;
     background-color: rgb(255, 255, 255);
@@ -61,7 +75,7 @@ header gets hidden by the navbar*/
     justify-content: center;
   }
 
-  #vis2 {
+  #grace-bar {
     margin: auto;
     width: 70%;
     background-color: rgb(255, 254, 254);
@@ -70,5 +84,37 @@ header gets hidden by the navbar*/
     display: flex;
     justify-content: center;
   }
+
+#grace-references {
+    margin: auto;
+    width: 70%;
+    background-color: rgb(255, 254, 254);
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+#vis {
+    margin: auto;
+    width: 70%;
+    background-color: rgb(255, 254, 254);
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.scatter {
+    height: 400px;
+    border: none;
+    justify-content: center;
+}
+
+.wrap-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
 
  
